@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * main - check if value is negative or positive
  * Return: Returns 0
  */
 int main(void)
+
 {
 	int i;
 
