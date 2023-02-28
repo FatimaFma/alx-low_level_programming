@@ -6,7 +6,7 @@
  */
 void puts2(char *str)
 {
-	int i, j, length;
+	int i, j, t, length;
 
 	j = 0;
 	t = 0;
@@ -16,7 +16,7 @@ void puts2(char *str)
 		length = i + 1;
 	}
 	t = length - 1;
-	for (j = 0; j >= t; j++)
+	for (j = 0; j <= t; j++)
 	{
 		if (j % 2 == 0)
 		{
