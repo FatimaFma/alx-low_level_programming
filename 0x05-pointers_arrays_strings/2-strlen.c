@@ -12,5 +12,12 @@ int _strlen(char *s)
 	{
 		length = i + 1;
 	}
-	return (length);
+	if (length == 1)
+	{
+		return (0);
+	}
+	else
+	{
+		return (length);
+	}
 }
