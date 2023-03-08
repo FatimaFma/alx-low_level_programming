@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stdbool.h>
 /**
  * _strspn - function that gets the length of a prefix substring
  * @s: string to be scanned
@@ -8,24 +10,41 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, l, ch;
+	unsigned int i, j, il, l1, l2;
 
-	l = 0;
-	for (i = 0; s[i] >= '\0'; i++)
+	l1 = 0;
+	l2 = 0;
+	i = 0;
+	j = 0;
+	il = 0;
+	while (s[i++])
 	{
-		ch = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		l1++;
+	}
+	while (s[j++])
+	{
+		l2++;
+	}
+	for (i = 0; i < l1; i++)
+	{
+		bool found = false;
+
+		for (j = 0; j < l2; j++)
 		{
 			if (accept[j] == s[i])
 			{
-				l++;
-				ch = 1;
+				found = true;
+				break;
 			}
 		}
-		if (ch == 0)
+		if (!found)
 		{
-			ch = 0;
+			break;
+		}
+		else
+		{
+			il++;
 		}
 	}
-	return (ch);
+	return (il);
 }
