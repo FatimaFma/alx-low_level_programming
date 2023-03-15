@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	{
 		;
 	}
-	strd = malloc(i * sizeof(char));
+	strd = malloc(i * sizeof(char) + 1);
 	if (strd == NULL)
 	{
 		return (NULL);
