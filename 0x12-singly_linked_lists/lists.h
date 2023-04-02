@@ -10,7 +10,7 @@
 typedef struct node
 {
 	char *str;
-	int len;
+	unsigned int len;
 	struct node *next;
 } list_t;
 size_t print_list(const list_t *h);
