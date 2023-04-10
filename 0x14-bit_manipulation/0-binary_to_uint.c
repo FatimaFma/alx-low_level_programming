@@ -18,6 +18,10 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (l = 0; b[l] != '\0'; l++)
 		;
+	if (l == 1 && (b[0] == '0' || b[0] == '1'))
+	{
+		return ((b[0] - 48));
+	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
