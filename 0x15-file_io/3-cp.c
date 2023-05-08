@@ -7,8 +7,8 @@ int write_to_file(char *buff, int to_f, int read_chars, char *f_to);
  * main - Entry point
  * @argc: Count of the arguments to start the program
  * @argv: An array of strings containing the arguments passed to the program
- * Return: Always zero, but It will have exit 97 
- * the file FILE_from, 99 when it can not open/write 
+ * Return: Always zero, but It will have exit 97
+ * the file FILE_from, 99 when it can not open/write
  */
 int main(int argc, char **argv)
 {
