@@ -6,13 +6,9 @@ int write_to_file(char *buff, int to_f, int read_chars, char *f_to);
 /**
  * main - Entry point
  * @argc: Count of the arguments to start the program
- * @argv: An array of strings containing the arguments passed to the program.
- * Description: The overall goal of this program is to copy the contents of a
- * file FILE_FROM to a file FILE_TO. Usage ./cp FILE_FROM FILE_TO
- * Return: Always zero, but It will have exit 97 when there it does not have
- * the right number of parameters, 98 when it can not read / open
- * the file FILE_from, 99 when it can not open/write to the file FILE_TO and
- * 100 when it can not close the file descriptors
+ * @argv: An array of strings containing the arguments passed to the program
+ * Return: Always zero, but It will have exit 97 
+ * the file FILE_from, 99 when it can not open/write 
  */
 int main(int argc, char **argv)
 {
@@ -67,7 +63,7 @@ int open_files(char *f_from, char *f_to)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_f);
 		exit(100);
 	}
-	if (close(to_d) == -1)
+	if (close(to_f) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_f);
 		exit(100);
